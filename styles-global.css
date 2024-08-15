@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Italiana:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Font Changes */
+body {
+    font-family: 'Italiana', serif; /* Italiana for body text */
+    color: #083343;
+    background-color: #f9f8f5;
+    padding-top: 80px; /* Adjust this value based on the actual height of your navbar */
+}
+
+/* Font adjustments for paragraphs */
+p {
+    font-family: 'Poppins', sans-serif; /* Set Poppins for all p tags */
+}
+
+/* Button styles with Poppins font */
+button, .best-sellers-button, .transparent-button, .feature-button, .purpose-button {
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
+    font-size: 16px; /* Ensure button text is legible */
+    font-weight: 500; /* Ensure buttons have a medium weight */
+}
+
+/* Header Navigation Bar Styling */
+header {
+    background-color: #f9f8f5;
+    z-index: 1000; /* Ensure header is above other elements */
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .navbar-toggler {
+    margin-right: 20px;
+}
+
+header .navbar-brand img {
+    max-height: 80px;
+    width: auto;
+    margin-left: 20px;
+}
+
+header .navbar-nav {
+    align-items: center;
+    text-align: center;
+}
+
+header .navbar-nav li {
+    margin: 0 15px;
+}
+
+header .navbar-nav li a {
+    color: #083343;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+
+header .navbar-nav li a:hover {
+    color: #2b7a78;
+}
+
+/* Video Hero Section Styling */
+.video-hero {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio */
+    overflow: hidden;
+    background-color: #000; /* Fallback color in case the video doesn't load */
+}
+
+.video-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    clip-path: inset(0px 0px 40px 0px); /* Adjust the bottom value (40px) to hide the watermark */
+    z-index: 1;
+}
+
+/* Full-Image Overlay for Hero Section */
+.video-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 2;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: right;
+    z-index: 3; /* Above the overlay */
+    max-width: 30%;
+}
+
+.overlay-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.overlay-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.overlay-content button {
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
+}
+
+.overlay-content button:hover {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+/* Best Sellers Button Styling */
+.best-sellers-button {
+    background-color: transparent;
+    color: #083343;
+    border: 2px solid #083343;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
+}
+
+.best-sellers-button:hover {
+    background-color: #083343;
+    color: #f9f8f5;
+    border: 2px solid #083343;
+}
+
+/* Transparent Button Styling */
+.transparent-button {
+    background-color: transparent;
+    color: #083343;
+    border: 2px solid #083343;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
+}
+
+.transparent-button:hover {
+    background-color: #083343;
+    color: #ffffff;
+    border: 2px solid #083343;
+}
+
+/* Features Section Styling */
+#features {
+    background-color: #000000 !important; /* Black background with !important */
+    color: #f9f8f5 !important; /* White text color */
+    padding: 50px 0;
+}
+
+#features h3,
+#features p {
+    color: #f9f8f5; /* Set the text color to white */
+}
+
+#features .text-center img {
+    max-width: 100%; /* Ensure the image does not exceed its container */
+    height: auto;
+}
+
+/* Feature Button Styling */
+.feature-button {
+    background-color: transparent;
+    color: #f9f8f5;
+    border: 2px solid #f9f8f5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
+}
+
+.feature-button:hover {
+    background-color: #083343;
+    color: #f9f8f5;
+    border: 2px solid #083343;
+}
+
+/* Driven by Purpose Section Styling */
+#driven-by-purpose {
+    background-color: #2b2f38 !important; /* Use the same dark background color as "A Journey with Nature" */
+    color: #f9f8f5 !important; /* Light text color */
+    padding: 50px 20px 0;
+    text-align: center;
+}
+
+#driven-by-purpose p {
+    max-width: 800px; /* Constrain paragraph width */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Purpose Button Styling */
+.purpose-button {
+    background-color: transparent;
+    color: #f9f8f5;
+    border: 2px solid #f9f8f5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
+}
+
+.purpose-button:hover {
+    background-color: #083343;
+    color: #ffffff;
+    border: 2px solid #083343;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header .navbar {
+        padding: 0 20px;
+    }
+
+    header .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .navbar-nav li {
+        margin: 5px 0;
+    }
+
+    .overlay-content {
+        max-width: 60%;
+        right: 5%;
+    }
+
+    .overlay-content h1 {
+        font-size: 2rem;
+    }
+
+    .overlay-content p {
+        font-size: 1rem;
+    }
+
+    .overlay-content button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    footer ul li {
+        margin: 5px 0;
+    }
+
+    #features .text-center img {
+        margin-bottom: 20px;
+    }
+
+    #features .text-start,
+    #features .text-center {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #driven-by-purpose .text-center {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-hero {
+        padding-bottom: 75%; /* Adjusts to ensure video covers smaller screens */
+    }
+
+    .overlay-content {
+        max-width: 90%;
+        padding: 10px;
+        right: 5%;
+    }
+
+    .overlay-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .overlay-content p {
+        font-size: 0.875rem;
+    }
+
+    .overlay-content button {
+        padding: 6px 12px;
+        font-size: 0.875rem;
+    }
+    
+    #features .row {
+        margin-bottom: 30px;
+    }
+
+    #driven-by-purpose {
+        padding: 30px 15px;
+    }
+}

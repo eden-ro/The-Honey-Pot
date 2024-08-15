@@ -1,0 +1,89 @@
+/* Home Page Hero Section */
+#home-hero {
+    background-image: url('home-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#home-hero h1 {
+    font-size: 4em;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Home Page Features Section */
+#home-features {
+    padding: 50px 20px;
+    background-color: #f9f8f5;
+    text-align: center;
+}
+
+#home-features h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#home-features .feature {
+    margin-bottom: 30px;
+}
+
+#home-features .feature img {
+    width: 100%;
+    height: auto;
+}
+
+/* Container for product images */
+.product-container {
+    position: relative; /* Ensure positioning context for the hover effect */
+    overflow: hidden; /* Hide overflow when scaling */
+}
+
+/* Product images */
+.product-container img {
+    transition: transform 0.3s ease; /* Smooth transition for the scale effect */
+}
+
+/* Enlarge effect on hover */
+.product-container:hover img {
+    transform: scale(1.1); /* Scale image to 110% of its original size */
+}
+
+/* Home Page Responsive Adjustments */
+@media (max-width: 768px) {
+    #home-hero h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    #home-hero h1 {
+        font-size: 1.8em;
+    }
+
+    #home-features h2 {
+        font-size: 2em;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #home-hero .transparent-button,
+    #home-features .transparent-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #home-hero .transparent-button,
+    #home-features .transparent-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
