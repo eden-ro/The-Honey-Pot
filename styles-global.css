@@ -65,11 +65,12 @@ header .navbar-nav li a {
     color: #083343;
     text-decoration: none;
     font-size: 1.3em;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }
 
 header .navbar-nav li a:hover {
-    color: #2b7a78;
+    color: #2b7a78; /* Hover color */
+    transform: translateY(-5px); /* Move text up by 5 pixels */
 }
 
 /* Video Hero Section Styling */
