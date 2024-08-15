@@ -227,11 +227,12 @@ header .navbar-nav li a:hover {
 
 #driven-by-purpose p {
     max-width: 800px; /* Constrain paragraph width */
-    margin: 0 auto; /* Center the paragraph */
+    margin: 0 auto 20px; /* Add margin-bottom to separate from button */
 }
 
 /* Purpose Button Styling */
 .purpose-button {
+    margin-top: 20px;
     background-color: transparent;
     color: #f9f8f5;
     border: 2px solid #f9f8f5;
