@@ -186,8 +186,8 @@ header .navbar-nav li a:hover {
 /* Categories Button Styling */
 .categories-button {
     background-color: transparent;
-    color: ##083343;
-    border: 2px solid ##083343;
+    color: #083343;
+    border: 2px solid #083343;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -196,8 +196,8 @@ header .navbar-nav li a:hover {
 }
 
 .categories-button:hover {
-    background-color: #083343;
-    color: #ffffff;
+   background-color: #083343;
+    color: #f9f8f5;
     border: 2px solid #083343;
 }
 
