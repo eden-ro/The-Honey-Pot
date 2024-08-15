@@ -1,184 +1,429 @@
-/* styles-global.css */
 @import url('https://fonts.googleapis.com/css2?family=Italiana:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Italiana:wght@400;700&display=swap');
 
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
+/* Global Font Changes */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: 'Italiana', serif; /* Italiana for body text */
+    color: #083343;
+    background-color: #f9f8f5;
+    padding-top: 80px; /* Adjust this value based on the actual height of your navbar */
 }
 
-/* Header styles */
+/* Font adjustments for paragraphs */
+p {
+    font-family: 'Poppins', sans-serif; /* Set Poppins for all p tags */
+}
+
+/* Button styles with Poppins font */
+button, .best-sellers-button, .transparent-button, .feature-button, .purpose-button {
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
+    font-size: 16px; /* Ensure button text is legible */
+    font-weight: 500; /* Ensure buttons have a medium weight */
+}
+
+/* Header Navigation Bar Styling */
 header {
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f8f5;
+    z-index: 1000; /* Ensure header is above other elements */
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .navbar-toggler {
+    margin-right: 20px;
 }
 
 header .navbar-brand img {
-    max-width: 150px;
+    max-height: 80px;
+    width: auto;
+    margin-left: 20px;
 }
 
-/* Navigation styles */
-.navbar-nav .nav-link {
-    font-weight: bold;
-    padding: 10px 20px;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #ffc107;
-}
-
-/* Hero Section */
-#hero-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
+header .navbar-nav {
     align-items: center;
-    justify-content: center;
     text-align: center;
-    color: #fff;
 }
 
-.video-hero .video-element {
+header .navbar-nav li {
+    margin: 0 15px;
+}
+
+header .navbar-nav li a {
+    color: #083343;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+
+header .navbar-nav li a:hover {
+    color: #2b7a78;
+}
+
+/* Video Hero Section Styling */
+.video-hero {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio */
+    overflow: hidden;
+    background-color: #000; /* Fallback color in case the video doesn't load */
+}
+
+.video-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    clip-path: inset(0px 0px 40px 0px); /* Adjust the bottom value (40px) to hide the watermark */
+    z-index: 1;
+}
+
+/* Full-Image Overlay for Hero Section */
+.video-hero::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 2;
 }
 
 .overlay-content {
-    z-index: 1;
-    max-width: 600px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: right;
+    z-index: 3; /* Above the overlay */
+    max-width: 30%;
 }
 
 .overlay-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 .overlay-content p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-/* Buttons */
-.transparent-button, .best-sellers-button, .purpose-button, .feature-button {
-    background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+.overlay-content button {
     padding: 10px 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
+    font-size: 1.25rem;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
 }
 
-.transparent-button:hover, .best-sellers-button:hover, .purpose-button:hover, .feature-button:hover {
-    background-color: #ffc107;
-    color: #000;
+.overlay-content button:hover {
+    background-color: white;
+    color: black;
+    border: none;
 }
 
-/* Sections */
-section {
-    padding: 60px 0;
+/* Best Sellers Button Styling */
+.best-sellers-button {
+    background-color: transparent;
+    color: #083343;
+    border: 2px solid #083343;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
 }
 
-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
+.best-sellers-button:hover {
+    background-color: #083343;
+    color: #f9f8f5;
+    border: 2px solid #083343;
 }
 
-section p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #666;
+/* Transparent Button Styling */
+.transparent-button {
+    background-color: transparent;
+    color: #083343;
+    border: 2px solid #083343;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
 }
 
-/* Product Container */
-.product-container {
+.transparent-button:hover {
+    background-color: #083343;
+    color: #ffffff;
+    border: 2px solid #083343;
+}
+
+/* Features Section Styling */
+#features {
+    background-color: #000000 !important; /* Black background with !important */
+    color: #f9f8f5 !important; /* White text color */
+    padding: 50px 0;
+}
+
+#features h3,
+#features p {
+    color: #f9f8f5; /* Set the text color to white */
+}
+
+#features .text-center img {
+    max-width: 100%; /* Ensure the image does not exceed its container */
+    height: auto;
+}
+
+/* Feature Button Styling */
+.feature-button {
+    background-color: transparent;
+    color: #f9f8f5;
+    border: 2px solid #f9f8f5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
+}
+
+.feature-button:hover {
+    background-color: #083343;
+    color: #f9f8f5;
+    border: 2px solid #083343;
+}
+
+/* Driven by Purpose Section Styling */
+#driven-by-purpose {
+    background-color: #2b2f38 !important; /* Use the same dark background color as "A Journey with Nature" */
+    color: #f9f8f5 !important; /* Light text color */
+    padding: 50px 20px 0;
     text-align: center;
 }
 
+#driven-by-purpose p {
+    max-width: 800px; /* Constrain paragraph width */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Purpose Button Styling */
+.purpose-button {
+    background-color: transparent;
+    color: #f9f8f5;
+    border: 2px solid #f9f8f5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
+}
+
+.purpose-button:hover {
+    background-color: #083343;
+    color: #ffffff;
+    border: 2px solid #083343;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header .navbar {
+        padding: 0 20px;
+    }
+
+    header .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .navbar-nav li {
+        margin: 5px 0;
+    }
+
+    .overlay-content {
+        max-width: 60%;
+        right: 5%;
+    }
+
+    .overlay-content h1 {
+        font-size: 2rem;
+    }
+
+    .overlay-content p {
+        font-size: 1rem;
+    }
+
+    .overlay-content button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    footer ul li {
+        margin: 5px 0;
+    }
+
+    #features .text-center img {
+        margin-bottom: 20px;
+    }
+
+    #features .text-start,
+    #features .text-center {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #driven-by-purpose .text-center {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-hero {
+        padding-bottom: 75%; /* Adjusts to ensure video covers smaller screens */
+    }
+
+    .overlay-content {
+        max-width: 90%;
+        padding: 10px;
+        right: 5%;
+    }
+
+    .overlay-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .overlay-content p {
+        font-size: 0.875rem;
+    }
+
+    .overlay-content button {
+        padding: 6px 12px;
+        font-size: 0.875rem;
+    }
+    
+    #features .row {
+        margin-bottom: 30px;
+    }
+
+    #driven-by-purpose {
+        padding: 30px 15px;
+    }
+}
+
+styles-home:
+/* Home Page Hero Section */
+#home-hero {
+    background-image: url('home-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#home-hero h1 {
+    font-size: 4em;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Home Page Features Section */
+#home-features {
+    padding: 50px 20px;
+    background-color: #f9f8f5;
+    text-align: center;
+}
+
+#home-features h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#home-features .feature {
+    margin-bottom: 30px;
+}
+
+#home-features .feature img {
+    width: 100%;
+    height: auto;
+}
+
+/* Container for product images */
+.product-container {
+    position: relative; /* Ensure positioning context for the hover effect */
+    overflow: hidden; /* Hide overflow when scaling */
+}
+
+/* Product images */
 .product-container img {
-    max-width: 100%;
-    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth transition for the scale effect */
 }
 
-.product-container p {
-    margin-top: 10px;
+/* Enlarge effect on hover */
+.product-container:hover img {
+    transform: scale(1.1); /* Scale image to 110% of its original size */
 }
 
-/* Categories Section */
-#categories .product-container p {
-    font-weight: bold;
+/* Home Page Responsive Adjustments */
+@media (max-width: 768px) {
+    #home-hero h1 {
+        font-size: 2.5em;
+    }
 }
 
-#categories .product-container a {
-    display: block;
-    margin-top: 10px;
+@media (max-width: 480px) {
+    #home-hero h1 {
+        font-size: 1.8em;
+    }
+
+    #home-features h2 {
+        font-size: 2em;
+    }
 }
 
-/* Features Section */
-#features {
-    background-color: #222;
-    color: #fff;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #home-hero .transparent-button,
+    #home-features .transparent-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
 
-#features h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-#features p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-/* Reviews Section */
-#reviews h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #ffc107;
-}
-
-#reviews p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 20px 0;
-}
-
-footer img {
-    max-width: 100px;
-}
-
-footer .nav-link {
-    color: #fff;
-}
-
-footer .nav-link:hover {
-    color: #ffc107;
+@media (max-width: 480px) {
+    #home-hero .transparent-button,
+    #home-features .transparent-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }
