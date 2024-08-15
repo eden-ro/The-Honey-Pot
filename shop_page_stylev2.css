@@ -1,0 +1,92 @@
+
+/*Header Navigation Bar Styling */
+header {
+    background-color: #F9F8F5;
+    z-index: 1000; /* Ensure header is above other elements */
+}
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header .navbar-toggler {
+    margin-right: 20px;
+}
+header .navbar-brand img {
+    max-height: 80px;
+    width: auto;
+    margin-left: 20px;
+}
+header .navbar-nav {
+    align-items: center;
+    text-align: center;
+}
+header .navbar-nav li {
+    margin: 0 15px;
+}
+header .navbar-nav li a {
+    color: #083343;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+header .navbar-nav li a:hover {
+    color: #2B7A78;
+}
+
+
+.carousel-inner > .carousel-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-inner > .scraping-honey {
+    background-image: url("./carosel1_pic2_extracting\ honey.jpg");
+    
+}
+
+.carousel-inner > .man-farming-honey {
+    background-image: url("./carosel1_pic3_extracting\ honey.jpeg");
+}
+
+.carousel-inner > .honeypot {
+    background-image: url("./carosel1_pic4_pic\ of\ honey.jpeg");
+}
+
+.enlarge:hover {
+    transform: scale(1.5);
+}
+
+.box {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.top-bar {
+    background-color: #083343;
+}
+
+footer {
+    background-color: #083343;
+    height: 300px;
+}
+
+.footer-logo{
+    margin-top: 50px;
+}
+
+body {
+    background-color: #F9F8F5;
+    padding-top: 200px;
+}
+
+body * {
+    font-family: poppins;
+    }

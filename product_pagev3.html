@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Honey Pot Product Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="product_page_style_v2.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--code for navigation ribbon at the top of the page-->
+    <!--logo-->
+    <header class="bg-light fixed-top py-3">
+      <nav class="navbar navbar-expand-lg container">
+        <a class="navbar-brand" href="Home.html">
+          <img src="./final.logo.png" alt="Logo" class="img-fluid" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link text-dark">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="./shop_pagev2.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark">Sale</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark">Blog</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-dark">Enquiries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark">Cart</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!--end of code for navigation bar at the top of the page-->
+
+    <!-- container for product carousel and product information on the side -->
+    <div class="container" style="margin-top: 50px">
+      <div class="row">
+        <!--code for carousel-->
+        <div class="col-6">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div
+                class="carousel-item active beauty-image-1"
+                data-bs-interval="10000"
+              ></div>
+              <div
+                class="carousel-item beauty-image-2"
+                data-bs-interval="2000"
+              ></div>
+              <div class="carousel-item beauty-image-3"></div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- end of carousel coding -->
+
+        <!-- start of product detail section code -->
+
+        <div class="col-5 ms-5">
+          <p class="productName">Honey Haven Day Cream</p>
+          <div class="d-flex flex-row mb-2">
+            <img
+              width="200px"
+              src="./Product Images/4out5stars.png"
+              alt="star-review"
+            />
+            <p class="d-flex align-items-center mb-0 review">100 Reviews</p>
+          </div>
+          <p id="price" class="productCost">£40.00</p>
+
+          <!-- button for size selection -->
+          <div class="sizeButtonGroups">
+            <div
+              class="btn-group-size"
+              role="group"
+              aria-label="Basic radio toggle button group"
+            >
+              <input
+                onclick="totalPrice('£40.00')"
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio1"
+                autocomplete="off"
+                checked
+              />
+              <label class="btn btn-outline-dark" for="btnradio1"
+                >Small: 20ml</label
+              >
+
+              <input
+                onclick="totalPrice('£45.00')"
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio2"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-dark" for="btnradio2"
+                >Medium: 50ml</label
+              >
+
+              <input
+                onclick="totalPrice('£50.00')"
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio3"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-dark" for="btnradio3"
+                >Large: 100ml</label
+              >
+            </div>
+          </div>
+          <!-- end of code for button for size selection -->
+
+          <!-- quantity and add to cart buttons -->
+
+          <div class="d-flex flex-row grid gap-3 quantityAll">
+            <!-- <p class="quantityLabel m-0">Quantity</p> -->
+            <div
+              class="d-flex flex-row align-items-center grid gap-3 quantityButtons"
+            >
+              <button
+                onclick="totalClick(-1)"
+                type="button"
+                class="btn btn-dark btn-lg"
+              >
+                -
+              </button>
+              <span id="totalClicks" class="quantityNum m-0">0</span>
+              <button
+                onclick="totalClick(1)"
+                type="button"
+                class="btn btn-dark btn-lg"
+              >
+                +
+              </button>
+            </div>
+
+            <button class="col-6 btn btn-dark" type="button">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- quantity and add to cart buttons -->
+    <!-- end of product detail section code -->
+
+    <!-- product overview accordion -->
+    <div class="container" style="margin-top: 60px">
+      <div class="row">
+        <div class="col-6">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                  style="font-size: 1.5rem"
+                >
+                  Product Description
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Natural humectants plant hyaluronic acid and manuka honey
+                  infuse skin with vital moisture. Antioxidant-rich Vinanza®
+                  Grape & Kiwi blends with peony to help restore skin's natural
+                  glow. <br />
+                  <br />
+                  <strong>Skin Benefits</strong><br />
+                  A luscious yet light moisturiser enriched with a double dose
+                  of natural hydration for your softest-ever skin. <br /><br />
+                  <strong>Scientific Validation</strong> <br />Antioxidant-rich
+                  Vinanza® Grape & Kiwi is clinically shown to help improve the
+                  appearance of skin by targeting redness and pigmentation. (New
+                  Zealand Extracts 2012) After four weeks' use, 97% say skin
+                  feels smooth and soft. (In-vivo trial results from 52
+                  participants after 4 weeks of use.) <br />
+                  <br />
+                  <strong>Credentials</strong><br />
+                  This natural facial cream is certified vegetarian by the UK
+                  Vegetarian Society, the oldest and most respected vegetarian
+                  and vegan organisation in the world. Antipodes is committed to
+                  repurposing, reusing and recycling, including using recyclable
+                  boxes made from 100% biodegradable cardboard derived from
+                  sustainable forests as well as glass bottles, aluminium tubes
+                  and printing with 100% eco ink from vegetables.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                  style="font-size: 1.5rem"
+                >
+                  Ingredients
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>Key Ingredients</strong> <br />Hyaluronic Acid
+                  Plant-based hyaluronic acid, produced from the fermentation of
+                  a bacterium found in soil and roots, supports skin hydration.
+                  <br />
+                  <br />
+                  <strong>Manuka Honey</strong> <br />World-famous manuka honey
+                  is an antibacterial superfood found only in New Zealand that
+                  helps promote youthful, fresh, and blemish-free skin. <br />
+                  <br />
+                  <strong>Full List of Ingredients </strong> <br />Aqua (water),
+                  Persea gratissima (avocado pear) oil, cetearyl olivate,
+                  propanediol, cetearyl alcohol, Olea europaea (olive) fruit
+                  oil, sorbitan olivate, parfum, betaine, glyceryl stearate
+                  citrate, palmitic acid, hydrogenated vegetable oil, mel (NZ
+                  Manuka honey ), Vitis vinifera (grape) seed extract, Actinidia
+                  deliciosa (kiwi) fruit extract, sodium hyaluronate (hyaluronic
+                  acid), Paeonia suffruticosa (peony) root extract, Actinidia
+                  chinensis (kiwi) seed oil, Cyathea cumingii leaf (mamaku black
+                  fern) extract, Saxifraga sarmentosa (strawberry begonia)
+                  extract, Salvia hispanica (chia) seed oil, Rosmarinus
+                  officinalis (rosemary) leaf extract, Scutellaria baicalensis
+                  (skullcap) root extract, Heliathus annuus (sunflower) seed
+                  oil, isoamyl laurate, glycerin, bisabolol, Xanthan gum,
+                  tapioca starch, glyceryl caprylate, gluconolactone, stearic
+                  acid, carrageenan, galactoarabinan, sodium benzoate, potassium
+                  sorbate, glutathione, arbutin, citric acid, glyceryl stearate,
+                  cinnamic acid, levulinic acid, caprylyl glycol, sodium
+                  levulinate, lauric acid, myristic acid, calcium gluconate,
+                  sodium citrate, sodium phytate, sodium sulfite, sodium
+                  hydroxide, aminopropyl ascorbyl phosphate, benzyl alcohol,
+                  acetyl hexapeptide-8, alcohol, butylene glycol, acetyl
+                  tyrosine, dehydroacetic acid, Phenoxyethanol, linalool, benzyl
+                  benzoate
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                  style="font-size: 1.5rem"
+                >
+                  How To Use
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Use this hyaluronic acid moisturiser as the final step in your
+                  evening ritual. For best results, apply after your favourite
+                  hydrating serum. Massage a generous amount into cleansed face,
+                  neck, and décolletage using upward strokes.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of product overview accordion -->
+
+        <!-- reviews section -->
+
+        <div class="col-5" style="margin-left: 30px">
+          <div
+            class="user1-icon d-flex flex-row justify-content-end grid gap-3"
+          >
+            <img
+              src="./review-user-icon3.png"
+              alt="flower-user-icon"
+              style="height: 50px; margin-top: 20px"
+            />
+
+            <div class="felx-column">
+              <img
+                src="./review-user-stars.png"
+                alt="review stars in black"
+                style="height: 100px"
+              />
+              <p class="user1-comment1">My skin is so soft now!</p>
+              <p class="user1-comment2">
+                This was the first face cream I purchased from Antipodes and I
+                am now using five of their products. Glides onto your skin,
+                sinks straight in with no greasy residue and the smell is just
+                amazing. Highly recommend.
+              </p>
+              <p class="d-flex justify-content-end">Julie B. - 10/08/2024</p>
+            </div>
+          </div>
+
+          <div
+            class="user1-icon d-flex flex-row justify-content-end grid gap-3"
+          >
+            <img
+              src="./review-user-icon3.png"
+              alt="flower-user-icon"
+              style="height: 50px; margin-top: 20px"
+            />
+
+            <div class="felx-column">
+              <img
+                src="./review-user-stars.png"
+                alt="review stars in black"
+                style="height: 100px"
+              />
+              <p class="user1-comment1">Like Caviar</p>
+              <p class="user1-comment2">
+                This is the first time I have used the cream is and it is
+                lovely. It absorbs into the skin quickly and the smell is
+                lovely. I have only been using it for a few weeks so can only
+                place my review on this. I will be buying this cream in the
+                future though, as I'm very pleased with it.
+              </p>
+              <p class="d-flex justify-content-end">
+                Kelly Campbell. - 20/06/2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of reviews section -->
+
+    <!-- You may also like -->
+    <div class="container" style="margin-top: 100px">
+      <h3 class="d-flex justify-content-center m-5">You May Also Like</h3>
+      <div class="container p-2">
+        <div class="row d-flex justify-content-center">
+          <div class="col-3 box beauty">
+            <img
+              width="100%"
+              src="./Product Images/main-beauty-product.png"
+              alt="main-beauty-product"
+            />
+            <p>£25.00</p>
+          </div>
+          <div class="col-3 box beauty">
+            <img
+              width="100%"
+              src="./Product Images/main-beauty-product.png"
+              alt="main-beauty-product"
+            />
+            <p>£25.00</p>
+          </div>
+          <div class="col-3 box beauty">
+            <img
+              width="100%"
+              src="./Product Images/main-beauty-product.png"
+              alt="main-beauty-product"
+            />
+            <p>£25.00</p>
+          </div>
+          <div class="col-3 box beauty">
+            <img
+              width="100%"
+              src="./Product Images/main-beauty-product.png"
+              alt="main-beauty-product"
+            />
+            <p>£25.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script2.js"></script>
+  </body>
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+      <img
+        src="./final.logo.png"
+        alt="Company Logo"
+        class="img-fluid mb-3"
+        style="max-width: 100px"
+      />
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link text-light">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light">Useful Links</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</html>

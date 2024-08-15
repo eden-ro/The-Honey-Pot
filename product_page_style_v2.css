@@ -1,0 +1,149 @@
+Header Navigation Bar Styling */
+header {
+    background-color: #F9F8F5;
+    z-index: 1000; /* Ensure header is above other elements */
+}
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header .navbar-toggler {
+    margin-right: 20px;
+}
+header .navbar-brand img {
+    max-height: 80px;
+    width: auto;
+    margin-left: 20px;
+}
+header .navbar-nav {
+    align-items: center;
+    text-align: center;
+}
+header .navbar-nav li {
+    margin: 0 15px;
+}
+header .navbar-nav li a {
+    color: #083343;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+header .navbar-nav li a:hover {
+    color: #2B7A78;
+}
+
+
+.carousel-inner  .carousel-item { 
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-inner .beauty-image-1 {
+    background-image: url("./Product Images/Product-Beauty-1.png");
+    
+}
+
+.carousel-inner .beauty-image-2 {
+    background-image: url("./Product Images/product_carousel_2.jpg");
+}
+
+.carousel-inner .beauty-image-3 {
+    background-image: url("./Product Images/beauty-product-5.jpg");
+}
+
+.carousel-inner .beauty-image-4 {
+    background-image: url("./Product Images/beauty-product-6");
+}
+
+.productName {
+    font-size: 3rem;
+}
+
+.review {
+    font-size: 1.5rem;
+}
+
+.productCost {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* .quantityLabel { 
+    font-size: 1.5rem;
+    margin: 0;
+}*/
+
+.quantityNum {
+    font-size: 2rem;
+}
+
+.sizeButtonGroups {
+    margin-bottom: 50px;
+}
+
+.user1-comment1 {
+    font-size: 1.5rem;
+}
+
+.user1-comment2 {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+
+footer {
+    background-color: #083343;
+    height: 300px;
+}
+
+.footer-logo{
+    margin-top: 50px;
+}
+
+.top-bar {
+    background-color: #083343;
+}
+
+body {
+    background-color: #F9F8F5;
+    padding-top: 200px;
+}
+
+
+
+Footer Styling */
+footer {
+    background-color: #083343;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+footer ul li {
+    margin: 0 15px;
+}
+footer ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+footer ul li a:hover {
+    color: #D3D3D3;
+}
+
+body * {
+font-family: poppins;
+}
+
