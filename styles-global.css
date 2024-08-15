@@ -221,7 +221,7 @@ header .navbar-nav li a:hover {
 #driven-by-purpose {
     background-color: #2b2f38 !important; /* Use the same dark background color as "A Journey with Nature" */
     color: #f9f8f5 !important; /* Light text color */
-    padding: 50px 20px 0;
+    padding: 50px 20px;
     text-align: center;
 }
 
