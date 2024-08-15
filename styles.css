@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400px;
+}
+
+h1, h2, h5 {
+    font-family: 'Italiana', serif;
+    font-weight: 400px, 400px;
+    font-size: 1.6rem,1.6rem,;
+    color: #083343;
+}
+
+
+#hero {
+    background-image: url('./XX.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    position: relative;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    animation: fadeInDown 1s ease-in-out;
+    font-weight: 400px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#hero button {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+.overlay-content button:hover {
+    background-color: white;
+    color: black;
+}
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+button, input[type="submit"] {
+    background-color: #F9F8F5; /* Button background color */
+    color: #083343; /* Text color */
+    border: 2px solid #083343; /* Border color */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+button:hover, input[type="submit"]:hover {
+    background-color: #083343; /* Background color on hover */
+    color: #FFFFFF; /* Text color on hover */
+}
+/* Bootstrap Button Override */
+button.btn.btn-primary {
+    background-color: #F9F8F5 !important; /* Override the default Bootstrap color */
+    color: #083343 !important; /* Override text color */
+    border: 2px solid #083343 !important; /* Add border to match */
+    padding: 10px 20px !important; /* Adjust padding */
+    border-radius: 5px !important; /* Rounded corners */
+    cursor: pointer !important; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s !important; /* Smooth transition */
+}
+button.btn.btn-primary:hover {
+    background-color: #083343 !important; /* Darker shade on hover */
+    color: #FFFFFF !important;
+}
+
+footer img {
+    transition: transform 0.3s ease;
+}
+
+
+footer img:hover{
+
+}
