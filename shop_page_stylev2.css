@@ -1,9 +1,8 @@
-
-/*Header Navigation Bar Styling */
+/* Header Navigation Bar Styling */
 header {
     background-color: #F9F8F5;
     z-index: 1000; /* Ensure header is above other elements */
-    font-family: italiana;
+    font-family: 'Italiana', serif;
 }
 header .navbar {
     display: flex;
@@ -24,6 +23,7 @@ header .navbar-brand img {
 header .navbar-nav {
     align-items: center;
     text-align: center;
+    font-family: 'Italiana', serif; /* Apply Italiana font to navigation links */
 }
 header .navbar-nav li {
     margin: 0 15px;
@@ -38,56 +38,69 @@ header .navbar-nav li a:hover {
     color: #2B7A78;
 }
 
-
-.carousel-inner > .carousel-item {
-    height: 500px;
-    background-size: cover;
-    background-position: center;
+/* Carousel Styling */
+.carousel-item img {
+    width: 100%;
+    height: auto;
 }
 
-.carousel-inner > .scraping-honey {
-    background-image: url("./carosel1_pic2_extracting\ honey.jpg");
-    
+/* Additional CSS */
+.card-title {
+    font-family: 'Italiana', serif;
 }
 
-.carousel-inner > .man-farming-honey {
-    background-image: url("./carosel1_pic3_extracting\ honey.jpeg");
-}
-
-.carousel-inner > .honeypot {
-    background-image: url("./carosel1_pic4_pic\ of\ honey.jpeg");
-}
-
-.enlarge:hover {
-    transform: scale(1.5);
-}
-
-.box {
-    display: none;
-}
-
-.show {
-    display: block;
-}
-
-.top-bar {
-    background-color: #083343;
-}
-
+/* Footer Styling */
 footer {
-    background-color: #083343;
-    height: 300px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+footer .nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+footer .nav-link:hover {
+    color: #2B7A78;
 }
 
-.footer-logo{
-    margin-top: 50px;
-}
-
+/* Global Styles */
 body {
-    background-color: #F9F8F5;
-    padding-top: 200px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #000;
 }
 
-body * {
-    font-family: poppins;
-    }
+/* Hero Section */
+#hero {
+    background: url('your-hero-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* View All Products Section */
+#view-all-products .card {
+    margin-bottom: 30px;
+}
+
+#view-all-products .btn-primary a {
+    color: white;
+    text-decoration: none;
+}
+
+/* FAQs Section */
+#faq h2 {
+    margin-bottom: 30px;
+}
+
+#faq .accordion-button {
+    font-family: 'Poppins', sans-serif;
+}
+
+#faq .accordion-body {
+    font-family: 'Poppins', sans-serif;
+}
