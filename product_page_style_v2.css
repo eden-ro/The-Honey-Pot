@@ -44,20 +44,20 @@ header .navbar-nav li a:hover {
 }
 
 .carousel-inner .beauty-image-1 {
-    background-image: url("Product-Beauty-1.png");
+    background-image: url(Product-Beauty-1.png);
     
 }
 
 .carousel-inner .beauty-image-2 {
-    background-image: url("product_carousel_2.jpg");
+    background-image: url(product_carousel_2.jpg);
 }
 
 .carousel-inner .beauty-image-3 {
-    background-image: url("beauty-product-5.jpg");
+    background-image: URL(beauty-product-5.jpg);
 }
 
 .carousel-inner .beauty-image-4 {
-    background-image: url("beauty-product-6");
+    background-image: url(beauty-product-6);
 }
 
 .productName {
