@@ -183,6 +183,24 @@ header .navbar-nav li a:hover {
     border: 2px solid #083343;
 }
 
+/* Categories Button Styling */
+.categories-button {
+    background-color: transparent;
+    color: ##083343;
+    border: 2px solid ##083343;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins for button text */
+}
+
+.categories-button:hover {
+    background-color: #083343;
+    color: #ffffff;
+    border: 2px solid #083343;
+}
+
 /* Features Section Styling */
 #features {
     background-color: #000000 !important; /* Black background with !important */
@@ -248,6 +266,25 @@ header .navbar-nav li a:hover {
     background-color: #083343;
     color: #ffffff;
     border: 2px solid #083343;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .nav-link {
+    color: #ffffff;
+    font-family: 'Italiana', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+footer .nav-link:hover {
+    color: #6c757d; /* Hover color */
+    transform: translateY(-5px); /* Move text up by 5 pixels */
 }
 
 /* Responsive Adjustments */
