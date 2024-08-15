@@ -3,6 +3,7 @@
 header {
     background-color: #F9F8F5;
     z-index: 1000; /* Ensure header is above other elements */
+    font-family: italiana;
 }
 header .navbar {
     display: flex;
