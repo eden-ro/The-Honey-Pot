@@ -108,7 +108,7 @@ body {
 /* Main Content Styles */
 .main-content {
     max-width: 820px;
-    margin-top: 20px;
+    padding-top: 20px;
     margin: 0 auto;
     padding: 20px;
     background-color: ##f9f8f5; 
