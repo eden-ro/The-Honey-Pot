@@ -1,0 +1,232 @@
+/* Header Navigation Bar Styling */
+header {
+    background-color: #F9F8F5;
+    z-index: 1000;
+    position: relative;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .navbar-brand {
+    margin-right: 20px;
+}
+
+header .navbar-brand img {
+    max-height: 80px;
+    width: auto;
+}
+
+header .navbar-toggler {
+    margin-right: 20px;
+}
+
+header .navbar-nav {
+    align-items: center;
+    text-align: center;
+    font-family: 'Italiana', sans-serif;
+}
+
+header .navbar-nav li {
+    margin: 0 15px;
+}
+
+header .navbar-nav li a {
+    color: #083343;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for header navigation links */
+header .navbar-nav li a:hover {
+    color: #6c757d;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Italiana", sans-serif;
+    font-weight: bold;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+
+/* New Text Section Styles */
+.hero-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: white;
+    color: black;
+    font-size: 25pt;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    font-family: "Italiana", sans-serif;
+}
+
+/* Hover effect for hero-text spans */
+.hero-text span {
+    text-decoration: none;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for hero-text spans */
+.hero-text span:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Image and Text Section Styles */
+.image-text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    padding: 20px;
+    width: 100%;
+}
+
+.image-text-item {
+    display: flex;
+    align-items: flex-start; /* Align image and text to the start (left) */
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-text-item img {
+    width: 300px; /* Fixed width for all images */
+    height: 200px; /* Fixed height to ensure consistency */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.image-text-item .text {
+    flex: 1;
+}
+
+.image-text-item .text h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.image-text-item .text p {
+    margin: 0;
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+.image-text-item .text a {
+    background-color: #F9F8F5;
+    color: #083343;
+    border: 2px solid #083343;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.image-text-item .text a:hover {
+    background-color: #083343;
+    color: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .navbar-custom {
+        flex-direction: column;
+    }
+
+    .navbar-center .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-center .nav-link {
+        margin: 10px 0;
+        font-size: 1.25rem;
+    }
+
+    .image-text-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-text-item img {
+        width: 100%; /* Make image full width on small screens */
+        height: auto; /* Adjust height to maintain aspect ratio */
+        margin-right: 0; /* Remove margin on small screens */
+        margin-bottom: 20px; /* Add margin below image */
+    }
+
+    .image-text-item .text {
+        max-width: 100%; /* Ensure text takes full width */
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .nav-link {
+    color: #ffffff;
+    font-family: 'Italiana', sans-serif;
+    transition: color 0.3s ease;
+}
+
+footer .nav-link:hover {
+    color: #6c757d;
+}

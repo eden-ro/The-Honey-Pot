@@ -1,0 +1,214 @@
+/* Ensure the body and html occupy full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Custom CSS */
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; 
+}
+
+/* Navbar Styles */
+.navbar-custom {
+    background-color: #F9F8F5;
+    z-index: 1000; 
+    position: relative; 
+    font-family: "Italiana", sans-serif; 
+    padding: 20px 40px; 
+    height: 100px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.navbar-custom .navbar-brand {
+    font-size: 2rem; 
+    color: #083343; 
+    margin-bottom: 10px; 
+    font-family: "Italiana", sans-serif; 
+}
+
+.navbar-custom .navbar-brand img {
+    max-height: 70px; 
+    width: auto; 
+}
+
+.navbar-custom .navbar-nav {
+    display: flex;
+    flex-direction: row; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.navbar-custom .nav-link {
+    font-size: 1.5rem; 
+    color: #083343; 
+    margin: 0 20px; 
+    text-decoration: none; 
+    font-family: "Italiana", sans-serif; 
+}
+
+.navbar-custom .nav-link:hover {
+    color: #6c757d; 
+}
+
+.navbar-custom .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-custom .navbar-right .navbar-heading {
+    font-size: 1.5rem; 
+    color: white; 
+    margin-right: 15px; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+
+/* Ensure responsive adjustments */
+@media (max-width: 767px) {
+    .navbar-custom {
+        flex-direction: column; 
+    }
+
+    .navbar-custom .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-custom .nav-link {
+        margin: 10px 0; 
+        font-size: 1.25rem; 
+    }
+}
+
+/* Back Link Styles */
+.back-wrapper {
+    padding: 10px 20px; /
+    background-color: #ffffff; 
+    position: relative; 
+    margin-top: 20px; 
+}
+
+.back-link {
+    color: #007bff;
+    text-decoration: none; 
+    font-size: 1.1em; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.back-link:hover {
+    text-decoration: none; 
+}
+
+/* Main Content Styles */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; 
+    position: relative; 
+}
+
+.main-content h1 {
+    font-size: 2.5em; 
+    line-height: 1.2; 
+    margin-bottom: 20px; /
+    font-family: 'Italiana', sans-serif; 
+}
+
+.main-content p {
+    font-size: 1.2em;
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+.main-content img.main-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 40px; 
+}
+
+/* Similar Articles Section */
+.similar-articles-wrapper {
+    padding: 20px 40px; 
+    background-color: #ffffff; 
+    margin: 0; 
+}
+
+.similar-articles-wrapper h2 {
+    margin-bottom: 30px; 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+.similar-articles {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: flex-start; 
+}
+
+.article-item {
+    width: calc(33.333% - 20px); 
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.article-item img {
+    width: 100%; 
+    height: 280px; 
+    object-fit: cover; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+}
+
+.article-title {
+    margin-top: 10px; 
+    text-align: left; 
+    width: 100%; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* Footer Styles */
+.footer-custom {
+    position: relative; 
+    background-color: #083343; 
+    color: white;
+    padding: 40px 20px; 
+    font-family: 'Poppins', sans-serif; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    overflow: hidden; 
+}
+
+/* Ensure equal spacing between footer sections */
+.footer-custom .footer-section {
+    flex: 1; /* Allow sections to grow and fill available space */
+    padding: 0 20px; /* Add horizontal padding to each section */
+}
+
+
+.footer-custom .footer-section p, .footer-custom .footer-section a {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.footer-custom .about-us-image {
+    width: 300px; 
+    height: auto; 
+    position: absolute; 
+    left: -350px; 
+    top: -80px; 
+    object-fit: cover; 
+    z-index: 0; /
+}
