@@ -1,3 +1,56 @@
+
+
+
+.carousel-inner > .carousel-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-inner > .scraping-honey {
+    background-image: url("./carosel1_pic2_extracting\ honey.jpg");
+    
+}
+
+.carousel-inner > .man-farming-honey {
+    background-image: url("./carosel1_pic3_extracting\ honey.jpeg");
+}
+
+.carousel-inner > .honeypot {
+    background-image: url("./carosel1_pic4_pic\ of\ honey.jpeg");
+}
+
+.enlarge:hover {
+    transform: scale(1.5);
+}
+
+.box {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.top-bar {
+    background-color: #083343;
+}
+
+footer {
+    background-color: #083343;
+    height: 300px;
+}
+
+.footer-logo{
+    margin-top: 50px;
+}
+
+body {
+    background-color: #F9F8F5;
+    padding-top: 90px;
+}
+
+
 /* Header Navigation Bar Styling */
 header {
     background-color: #F9F8F5;
