@@ -1,42 +1,3 @@
-Header Navigation Bar Styling */
-header {
-    background-color: #F9F8F5;
-    z-index: 1000; /* Ensure header is above other elements */
-}
-header .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-header .navbar-toggler {
-    margin-right: 20px;
-}
-header .navbar-brand img {
-    max-height: 80px;
-    width: auto;
-    margin-left: 20px;
-}
-header .navbar-nav {
-    align-items: center;
-    text-align: center;
-}
-header .navbar-nav li {
-    margin: 0 15px;
-}
-header .navbar-nav li a {
-    color: #083343;
-    text-decoration: none;
-    font-size: 1.3em;
-    transition: color 0.3s ease;
-}
-header .navbar-nav li a:hover {
-    color: #2B7A78;
-}
-
-
 .carousel-inner  .carousel-item { 
     height: 450px;
     background-size: cover;
@@ -117,7 +78,7 @@ body {
 
 
 
-Footer Styling */
+/* Footer Styling */
 footer {
     background-color: #083343;
     color: #FFFFFF;
@@ -143,5 +104,12 @@ footer ul li a:hover {
     color: #D3D3D3;
 }
 
+body *{
+font-family: poppins;
+}
 
-
+header * {
+    font-family: 'Italiana', serif; /* Italiana for body text */
+    color: #083343;
+    background-color: #f9f8f5;
+}
